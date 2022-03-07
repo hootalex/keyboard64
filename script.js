@@ -62,5 +62,5 @@ function selectkeyboard() {
 }
 
 document.querySelector('h2').addEventListener('click', event => {
-  loadanimation("♪ Sounds from real keyboards! Key clicks are sampled 30 times and played back randomly for a more authentic experience ⚄ Space and return recorded separately ☂ A hootalex project")
+  loadanimation("♪ Sounds from real keyboards! Key clicks are sampled 32 times and played back randomly for a more authentic experience ⚄ Space and return recorded separately ☂ A hootalex project")
 });
