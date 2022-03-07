@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Keyboard 64</title>
+    <link rel="stylesheet" href="https://use.typekit.net/mmf5weo.css">
+      <link rel="stylesheet" href="/simplekeyboard.css">
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="https://cdn.glitch.global/4b936203-2c16-485a-8e8d-1317837db8a6/keyico.png?v=1646676316470"/>
+    <meta name="Description" content="Retro Keyboard SoundSim" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+  </head>
+
+  <body>
+    <div class="container">
+      
+    
+    <div class="typemodule">
+      
+    <div class="selectcontainer">
+      <hr style="border: 1px solid var(--red)">
+      <hr style="border: 1px solid var(--orange)">
+      <hr style="border: 1px solid #f6ce36">
+      <hr style="border: 1px solid var(--green)">
+      <hr style="border: 1px solid var(--blue)">
+    <h1>
+      Keyboard 64
+    </h1>
+        <h2>
+          Retro Keyboard SoundSim
+      </h2>
+      <hr>
+
+      </div>
+    <hr>
+      <textarea placeholder="" type="text" class="keypad input" contenteditable="true" spellcheck="false" onkeydown="clicksound(keyboard)"></textarea>
+    
+      <hr>
+      <select id="keyboardselect" onchange="selectkeyboard()">
+  <option value="MacintoshPlusM0110A" long="Macintosh Plus Keyboard M0110A / Made in Malaysia c. 1986">Macintosh Plus • 1986</option>
+  <option value="" long="This is just a test option. No keyboard here yet!">Test</option>
+
+</select>
+      <hr>
+      <div class="simple-keyboard"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/sounds.js" defer></script>
+  <script src="/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+  <script src="keyboard.js"></script>
+
+      </div>
+  </body>
+</html>
