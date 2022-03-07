@@ -61,6 +61,15 @@ html {
   margin: 1px;
 }
 
+#info {
+display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--text);
+    text-align: center;
+    border-radius: 50%;
+}
+
 .simple-keyboard {
   max-width: 100%;
 }
@@ -104,6 +113,7 @@ h2 {
   margin: 0;
   float: right;
   padding-top: 13px;
+  cursor: pointer;
 }
 
 h1,
