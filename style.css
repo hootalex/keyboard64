@@ -77,6 +77,15 @@ display: inline-block;
     border-radius: 50%;
 }
 
+#logo {
+  width: 200px;
+    transform: translate(1px, 11px);
+}
+
+.selectcontainer {
+  padding-bottom: 10px;
+}
+
 .simple-keyboard {
   max-width: 100%;
 }
@@ -258,6 +267,10 @@ hr {
 
   .selectcontainer {
     padding: 0;
+  }
+  
+  #logo {
+    width: 145px;
   }
 
   .typemodule {

@@ -7,6 +7,9 @@ function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function getKeyboard() {
+  keyboard = window[document.getElementById("keyboardselect").value]
+}
 
 function clicksound(keyboard) {
   // getKeyboard()
@@ -67,6 +70,7 @@ function selectkeyboard() {
 }
 
 document.querySelector('h2').addEventListener('click', event => {
+  keypad.value = ""
   loadanimation("♪ Sounds from real keyboards! Key clicks are sampled 32 times and played back randomly for a more authentic experience ⚄ Space and return recorded separately ☂ A hootalex project")
 });
 
