@@ -1,18 +1,16 @@
 let key = 0
-let keyboard = MacintoshPlusM0110A
+let keyboard = ""
 let keypad = document.querySelector('.keypad');
-const inittext = "Start typing or select a keyboard ☟" 
+const inittext = "" 
 
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function getKeyboard() {
-    keyboard = window[document.getElementById("keyboardselect").value]
-}
 
 function clicksound(keyboard) {
-  getKeyboard()
+  // getKeyboard()
+  keyboard = window[document.getElementById("keyboardselect").value]
   let keypressed = window.event.code || window.event.which;
   
   if (keypressed == "Space") {
@@ -47,10 +45,15 @@ function loadanimation(placeholder) {
 
 }
 
+function focusKeypad() {
+  
+  if (window.matchMedia('screen and (max-width: 768px)').matches) {}
+ else {
+  
 keypad.focus();
 keypad.select();
-
-loadanimation(inittext)
+ }
+}
 
 function selectkeyboard() {
   keypad.value = ""
@@ -59,8 +62,14 @@ function selectkeyboard() {
     var longinfo = option.getAttribute("long");
   
   loadanimation("☞ "+longinfo)
+  
+  focusKeypad()
 }
 
 document.querySelector('h2').addEventListener('click', event => {
   loadanimation("♪ Sounds from real keyboards! Key clicks are sampled 32 times and played back randomly for a more authentic experience ⚄ Space and return recorded separately ☂ A hootalex project")
+});
+
+document.querySelector('#keyboardselect').addEventListener('click', event => {
+  document.querySelector('#keyboardselect').classList.remove("glow");
 });
