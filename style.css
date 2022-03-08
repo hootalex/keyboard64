@@ -200,7 +200,7 @@ font-family: Enter Command;
     padding: 15px;
     margin: 0;
   overflow: auto;
-    box-shadow: inset 0px -1px 0px 1px rgb(255 255 255 / 15%), var(--shadow);
+    box-shadow: inset 0px -1px 0px 1px rgb(255 255 255 / 15%), 0px 2px 0px 0px rgba(0, 0, 0, 0.46);
 }
 
 /* [contentEditable=true]:empty:not(:focus):before{
