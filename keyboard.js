@@ -65,7 +65,8 @@ function onKeyPress(button) {
     if (button == "{space}") { 
       getKeyboard();
     keyboard.play("space")
-  } else {
+  } else if (button == "{enter}") {
+    keyboard.play("return") } else {
   
   clicksound(keyboard)
   }

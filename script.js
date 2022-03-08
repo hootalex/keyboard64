@@ -16,14 +16,18 @@ function clicksound(keyboard) {
   keyboard = window[document.getElementById("keyboardselect").value]
   let keypressed = window.event.code || window.event.which;
   
+  
   if (keypressed == "Space") {
     keyboard.play("space")
+  } else if (keypressed == "Enter") { 
+    
+    keyboard.play("return")
   } else {
     
         key++
       key = key + randomInteger(0, 3) 
     
-        if (key >= 11) {
+        if (key >= 15) {
       key = 1
           keyboard.play("key"+key)
     } else {
@@ -32,10 +36,15 @@ function clicksound(keyboard) {
     }
   
   }
-console.log(keypressed)
+// console.log(keypressed)
   console.log(key)
   
 }
+
+// utility sync
+// function clicksound(keyboard) {
+//   MacintoshPlusM0110A.play("key14")
+// }
 
 function loadanimation(placeholder) {
   let interval;
@@ -71,7 +80,7 @@ function selectkeyboard() {
 
 document.querySelector('h2').addEventListener('click', event => {
   keypad.value = ""
-  loadanimation("♪ Sounds from real keyboards! Key clicks are sampled 32 times and played back randomly for a more authentic experience ⚄ Space and return recorded separately ☂ A hootalex project")
+  loadanimation("♪ Sounds from real keyboards! Key clicks are sampled 14 times and played back randomly for a more authentic experience ⚄ Space and return recorded separately ☂ A hootalex project")
 });
 
 document.querySelector('#keyboardselect').addEventListener('click', event => {
