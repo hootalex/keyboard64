@@ -17,7 +17,7 @@
 --orangetrans: #ff93236e;
 --text: white;
 --accent: rgba(238, 238, 238, 0.5);
---screen: black;
+--screen: #1b2014;
 --key: var(--text);
 --keycap: var(--screen);
 --shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.46);
@@ -141,7 +141,6 @@ h2 {
 }
 
 select {
-  text-align: center;
   font-size: 1rem;
   border: none;
   color: var(--keycap);
@@ -192,7 +191,7 @@ hr {
   font-family: Arc;
   font-size: 1.1rem;
   background-color: var(--screen);
-  color: var(--orange);
+  color: var(--green);
   width: 450px;
   height: 300px;
   line-height: 1.2;
@@ -201,11 +200,11 @@ hr {
   margin: 0;
   border: none;
   resize: none;
-  box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.5);
+  box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.35);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--orange);
+  color: var(--green);
   opacity: 1; /* Firefox */
 }
 
