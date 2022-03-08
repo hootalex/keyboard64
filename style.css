@@ -199,7 +199,7 @@ font-family: Enter Command;
     border-radius: 20px;
     padding: 15px;
     margin: 0;
-  overflow: scroll;
+  overflow: auto;
     box-shadow: inset 0px -1px 0px 1px rgb(255 255 255 / 15%), var(--shadow);
 }
 
