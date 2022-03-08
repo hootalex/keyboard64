@@ -38,7 +38,6 @@ function clicksound(keyboard) {
   }
 // console.log(keypressed)
   console.log(key)
-  
 }
 
 // utility sync

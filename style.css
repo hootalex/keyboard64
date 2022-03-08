@@ -188,6 +188,7 @@ hr {
 }
 
 .keypad {
+  position: relative;
 font-family: Enter Command;
     font-size: 1.5rem;
     background-color: var(--screen);
@@ -199,9 +200,16 @@ font-family: Enter Command;
     border-radius: 20px;
     padding: 15px;
     margin: 0;
+  display: inline-block;
   overflow: auto;
     box-shadow: inset 0px -1px 0px 1px rgb(255 255 255 / 15%), 0px 2px 0px 0px rgba(0, 0, 0, 0.46);
 }
+
+
+/* .keypad div {
+  display: inline-block;
+} */
+
 
 /* [contentEditable=true]:empty:not(:focus):before{
     content:attr(data-text)
@@ -249,6 +257,22 @@ font-family: Enter Command;
   html {
     padding: 0rem;
   }
+  
+/*   .keypad {
+    caret-color: transparent;
+  }
+  
+  .keypad:after {
+  content: '';
+  width: 12px;
+  height: 18px;
+  transform: translate(0px, 4px);
+  background: var(--green);
+  opacity: 0;
+  position: absolute;
+  display: inline;
+  animation: blink 1s linear infinite;
+} */
 
   .hg-button {
     height: 50px !important;
