@@ -75,6 +75,9 @@ display: inline-block;
     border: 1px solid var(--text);
     text-align: center;
     border-radius: 50%;
+    font-family: Georgia;
+    font-style: italic;
+    font-size: .75rem;
 }
 
 #logo {
