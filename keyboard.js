@@ -56,14 +56,14 @@ document.querySelector(".input").addEventListener("input", event => {
 console.log(board);
 
 function onChange(input) {
-  document.querySelector(".input").value = input;
+  document.querySelector(".input").innerText = input;
   console.log("Input changed", input);
 }
 
 function onKeyPress(button) {
+  getKeyboard();
   console.log("Button pressed", button);
     if (button == "{space}") { 
-      getKeyboard();
     keyboard.play("space")
   } else if (button == "{enter}") {
     keyboard.play("return") } else {

@@ -14,7 +14,7 @@
 --green: #96d736;
 --blue: #38bbfb;
 --orange: #ff9323;
---orangetrans: #ff93236e;
+--orangetrans: #96d73654;
 --text: white;
 --accent: rgba(238, 238, 238, 0.5);
 --screen: #1b2014;
@@ -37,16 +37,16 @@
   background: var(--orangetrans); /* Gecko Browsers */
 }
 
-@font-face {
-  font-family: C64;
-  src: url("https://cdn.glitch.global/4b936203-2c16-485a-8e8d-1317837db8a6/C64_Pro_Mono-STYLE.ttf?v=1646420719921")
-    format("truetype");
-}
-
-@font-face {
+/* @font-face {
   font-family: Arc;
   src: url("https://cdn.glitch.global/d0348cf0-2764-43de-96b5-8d953d48957d/Ark-Pixel-10px-latin-Regular.otf?v=1644413004545")
     format("opentype");
+} */
+
+@font-face {
+  font-family: Enter Command;
+  src: url("https://cdn.glitch.global/4b936203-2c16-485a-8e8d-1317837db8a6/EnterCommand.ttf?v=1646746486285")
+    format("truetype");
 }
 
 * {
@@ -143,8 +143,8 @@ h2 {
 select {
   font-size: 1rem;
   border: none;
-  color: var(--keycap);
-  background-color: var(--key);
+  color: var(--text);
+  background-color: #5d6266;
   border-radius: 0px;
   padding: 10px;
   border-radius: 5px;
@@ -188,19 +188,26 @@ hr {
 }
 
 .keypad {
-  font-family: Arc;
-  font-size: 1.1rem;
-  background-color: var(--screen);
-  color: var(--green);
-  width: 450px;
-  height: 300px;
-  line-height: 1.2;
-  border-radius: 20px;
-  padding: 15px;
-  margin: 0;
-  border: none;
-  resize: none;
-  box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.35);
+font-family: Enter Command;
+    font-size: 1.5rem;
+    background-color: var(--screen);
+    color: var(--green);
+    width: 450px;
+    height: 300px;
+    line-height: 1;
+  letter-spacing: .025rem;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 0;
+    box-shadow: inset 0px -1px 0px 1px rgb(255 255 255 / 15%), var(--shadow);
+}
+
+/* [contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-text)
+} */
+
+[contentEditable=true]:empty:before{
+    content:attr(data-text)
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

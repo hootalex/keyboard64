@@ -50,9 +50,10 @@ function loadanimation(placeholder) {
   let interval;
   let c = ""
   
- interval = setInterval(function () {c = c+"▒"; keypad.placeholder = c}, randomInteger(5, 25));
   
-  setTimeout(() => {clearInterval(interval); keypad.placeholder =  placeholder}, 250);
+ interval = setInterval(function () {c = c+"♪ "; keypad.setAttribute("data-text", c);}, randomInteger(5, 10));
+  
+  setTimeout(() => {clearInterval(interval); keypad.setAttribute("data-text", placeholder);}, 250);
   console.log(placeholder)
 
 }
@@ -68,19 +69,17 @@ keypad.select();
 }
 
 function selectkeyboard() {
-  keypad.value = ""
+  keypad.innerText = ""
     var e = document.getElementById("keyboardselect");
     var option= e.options[e.selectedIndex];
     var longinfo = option.getAttribute("long");
-  
-  loadanimation("☞ "+longinfo)
-  
-  focusKeypad()
+  loadanimation(longinfo)
+  focusKeypad();
 }
 
 document.querySelector('h2').addEventListener('click', event => {
-  keypad.value = ""
-  loadanimation("♪ Sounds from real keyboards! Key clicks are sampled 14 times and played back randomly for a more authentic experience ⚄ Space and return recorded separately ☂ A hootalex project")
+  keypad.innerText = ""
+  loadanimation("♪ Sounds from real keyboards! ♪ Key clicks are sampled 14 times and played back randomly for a more authentic experience. Space and return recorded separately. A hootalex project.")
 });
 
 document.querySelector('#keyboardselect').addEventListener('click', event => {
