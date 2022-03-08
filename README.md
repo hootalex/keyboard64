@@ -4,4 +4,4 @@
 
 * Sounds from real keyboards! 
 * Key clicks are sampled 14 times and played back randomly
-* Return and spacebar sampled separately 
+* Return and space sampled separately 
