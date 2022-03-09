@@ -70,6 +70,7 @@ keypad.select();
 function selectkeyboard() {
   drive.play();
   keypad.innerText = ""
+  board.clearInput();
     var e = document.getElementById("keyboardselect");
     var option= e.options[e.selectedIndex];
     var longinfo = option.getAttribute("long");
@@ -80,6 +81,7 @@ function selectkeyboard() {
 document.querySelector('h2').addEventListener('click', event => {
   drive.play();
   keypad.innerText = ""
+  board.clearInput();
   loadanimation("♪ Sounds from real keyboards! ♪ Key clicks are sampled 14 times and played back randomly for a more authentic experience. Space and return recorded separately. 'Enter Command' font by Font End Dev. A hootalex project.")
 });
 
