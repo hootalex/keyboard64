@@ -47,6 +47,8 @@ if (document.querySelector(".hg-button-shiftactivated")) {
     
   }
   
+  console.log(key)
+  
 });
 
 function keydown(key) {
@@ -76,7 +78,7 @@ function clicksound(keyboard) {
 
 // utility for syncing buttons
 // function clicksound(keyboard) {
-//   MacintoshPlusM0110A.play("key14")
+//   AppleDesignM2980.play("return")
 // }
 
 function loadanimation(placeholder) {

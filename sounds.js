@@ -40,3 +40,25 @@ var MacintoshPlusM0110A = new Howl({
     return: [29290, 500],
   }
 });
+
+var AppleDesignM2980 = new Howl({
+  src: ['https://cdn.glitch.global/4b936203-2c16-485a-8e8d-1317837db8a6/AppleDesign_01.m4a?v=1646931210333'],
+  sprite: {
+    key1: [1950, 400],
+    key2: [2450, 500],
+    key3: [2940, 500],
+    key4: [3450, 400],
+    key5: [3930, 400],
+    key6: [4440, 400],
+    key7: [4900, 400],
+    key8: [5400, 400],
+    key9: [5900, 400],
+    key10: [6380, 400],
+    key11: [6900, 400],
+    key12: [7400, 400],
+    key13: [7870, 400],
+    key14: [8400, 430],
+    space: [19240, 500],
+    return: [23400, 500],
+  }
+});
