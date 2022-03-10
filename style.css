@@ -21,12 +21,13 @@
 --key: var(--text);
 --keycap: var(--screen);
 --shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.46);
+--space: 15px;
 }
 
 @keyframes glow {
-  0%   { box-shadow: 0px 0px 0px 2px var(--blue);; }
-  50% { box-shadow: 0px 0px 0px 5px var(--blue);; }
-  100% { box-shadow: 0px 0px 0px 2px var(--blue);; }
+  0%   { box-shadow: 0px 0px 0px 2px var(--blue); }
+  50% { box-shadow: 0px 0px 0px 5px var(--blue); }
+  100% { box-shadow: 0px 0px 0px 2px var(--blue); }
 }
 
 
@@ -86,10 +87,11 @@ display: inline-block;
 }
 
 .selectcontainer {
-  padding-bottom: 10px;
+  padding-bottom: 25px;
 }
 
 .simple-keyboard {
+  margin-top: var(--space);
   max-width: 100%;
 }
 
@@ -168,6 +170,12 @@ hr {
   border: none;
 }
 
+hr {
+  height: 0;
+  margin: 0;
+}
+
+
 @keyframes blink {
   0% {
     opacity: 0;
@@ -181,6 +189,19 @@ hr {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes selected {
+  0% {
+    box-shadow: inset 0px 0px 0px -20px var(--blue) , var(--shadow);;
+  }
+  100% {
+    box-shadow: inset 550px 0px 0px -20px transparent, var(--shadow);;
+  }
+}
+
+.selected {
+  animation: selected 1s;
 }
 
 .blink {
@@ -203,6 +224,8 @@ font-family: Enter Command;
   display: inline-block;
   overflow: auto;
     box-shadow: inset 0px -1px 0px 1px rgb(255 255 255 / 15%), 0px 2px 0px 0px rgba(0, 0, 0, 0.46);
+caret-color: transparent;
+    margin-bottom: var(--space);
 }
 
 
@@ -216,7 +239,7 @@ font-family: Enter Command;
 } */
 
 [contentEditable=true]:empty:before{
-    content:attr(data-text)
+    content:attr(data-text);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -252,6 +275,11 @@ font-family: Enter Command;
     transform: translateY(2px)!important;
     box-shadow: none !important;
   }
+
+.keybuttonpress {
+      transform: translateY(2px)!important;
+    box-shadow: none !important;
+}
 
 @media screen and (max-width: 600px) {
   html {
@@ -303,6 +331,7 @@ font-family: Enter Command;
 
   .selectcontainer {
     padding: 0;
+    margin-bottom: var(--space);
   }
   
   #logo {
