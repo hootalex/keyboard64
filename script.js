@@ -78,7 +78,7 @@ function clicksound(keyboard) {
 
 // utility for syncing buttons
 // function clicksound(keyboard) {
-//   AppleDesignM2980.play("return")
+//   Mitsumi.play("return")
 // }
 
 function loadanimation(placeholder) {
@@ -110,11 +110,13 @@ function focusKeypad() {
 
 function selectkeyboard() {
   document.querySelector('#keyboardselect').classList.remove("glow");
-    // document.querySelector('select').classList.add("selected");
-    //   setTimeout(() => {
-    //     document.querySelector('select').classList.remove("selected");
-    // }, 1000);
-    drive.play();
+    document.querySelector('select').classList.add("selected");
+      setTimeout(() => {
+        document.querySelector('select').classList.remove("selected");
+    }, 1000);
+      keyboard = window[document.getElementById("keyboardselect").value]
+
+    keyboard.play("space")
     keypad.innerText = ""
     board.clearInput();
     var e = document.getElementById("keyboardselect");
