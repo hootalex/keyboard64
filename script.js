@@ -82,19 +82,19 @@ function clicksound(keyboard) {
 // }
 
 function loadanimation(placeholder) {
-    let interval;
-    let c = ""
+//     let interval;
+//     let c = ""
 
 
-    interval = setInterval(function() {
-        c = c + "♪ ";
-        keypad.setAttribute("data-text", c);
-    }, randomInteger(5, 10));
-
+//     interval = setInterval(function() {
+//         c = c + "♪ ";
+//         keypad.setAttribute("data-text", c);
+//     }, randomInteger(5, 10));
+keypad.setAttribute("data-text", "");
     setTimeout(() => {
-        clearInterval(interval);
+        // clearInterval(interval);
         keypad.setAttribute("data-text", placeholder);
-    }, 250);
+    }, 150);
     console.log(placeholder)
 
 }
