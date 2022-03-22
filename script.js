@@ -78,7 +78,7 @@ function clicksound(keyboard) {
 
 // utility for syncing buttons
 // function clicksound(keyboard) {
-//   IBM1391401.play("return")
+//   TRS80COCO1.play("return")
 // }
 
 function loadanimation(placeholder) {
