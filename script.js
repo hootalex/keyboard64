@@ -1,7 +1,7 @@
 let key = 0
 let keyboard = ""
 let keypad = document.querySelector('.keypad');
-const inittext = ""
+
 
 function randomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -78,7 +78,7 @@ function clicksound(keyboard) {
 
 // utility for syncing buttons
 // function clicksound(keyboard) {
-//   Mitsumi.play("return")
+//   IBM1391401.play("return")
 // }
 
 function loadanimation(placeholder) {
@@ -116,7 +116,6 @@ function selectkeyboard() {
     }, 1000);
       keyboard = window[document.getElementById("keyboardselect").value]
 
-    keyboard.play("space")
     keypad.innerText = ""
     board.clearInput();
     var e = document.getElementById("keyboardselect");
@@ -124,6 +123,7 @@ function selectkeyboard() {
     var longinfo = option.getAttribute("long");
     loadanimation(longinfo)
     focusKeypad();
+  keyboard.play("space")
 }
 
 document.querySelector('h2').addEventListener('click', event => {
@@ -136,3 +136,8 @@ document.querySelector('h2').addEventListener('click', event => {
 // document.querySelector('#keyboardselect').addEventListener('click', event => {
 //     document.querySelector('#keyboardselect').classList.remove("glow");
 // });
+
+let keyboardnum = document.querySelector("select").length-1
+
+keypad.innerText = ""
+loadanimation("Welcome to Keyboard 64! "+ keyboardnum + " keyboards ready to use with more to come soon.")
